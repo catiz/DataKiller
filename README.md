@@ -1,5 +1,5 @@
 # 网络占用测试工具 (Network Usage Test Tool)
-
+[中文](./README.md) [英文](./README_EN.md)
 ## 项目介绍
 
 本项目旨在测试网络在长时间处于高占用状态下的稳定性，尤其是在长时间下载的情况下，网络是否能保持高速稳定的下载速度。该工具支持在线预览，用户可以通过浏览器访问测试页面进行网络占用测试。
@@ -23,20 +23,20 @@
 1. 克隆项目：
 
     ```bash
-    git clone https://github.com/yourusername/network-usage-test.git
+    git clone https://github.com/catiz/DataKiller.git
     ```
 
 2. 安装依赖：
 
     ```bash
-    cd network-usage-test
+    cd DataKiller
     npm install
     ```
 
-3. 启动项目：
+3. 调试项目：
 
     ```bash
-    npm run serve
+    npm run dev
     ```
 
 4. 打开浏览器并访问 `http://localhost:8080`，即可开始测试。

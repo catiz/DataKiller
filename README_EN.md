@@ -1,5 +1,5 @@
 # Network Usage Test Tool
-
+[Chinese](./README.md) [English](./README_EN.md)
 ## Project Description
 
 This project is designed to test the stability of the network when under high utilization for extended periods, especially during prolonged downloads. It focuses on assessing whether the network can maintain high-speed, stable downloads. The tool supports online preview, and users can access the test page through the browser to perform network usage testing.
@@ -23,20 +23,20 @@ You can access the online preview through the following link:
 1. Clone the project:
 
     ```bash
-    git clone https://github.com/yourusername/network-usage-test.git
+    git clone https://github.com/catiz/DataKiller.git
     ```
 
 2. Install dependencies:
 
     ```bash
-    cd network-usage-test
+    cd DataKiller
     npm install
     ```
 
-3. Start the project:
+3. Dev the project:
 
     ```bash
-    npm run serve
+    npm run dev
     ```
 
 4. Open a browser and visit `http://localhost:8080` to start testing.
