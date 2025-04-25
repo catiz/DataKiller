@@ -1,5 +1,5 @@
 # Network Usage Test Tool
-[Chinese](./README.md) [English](./README_EN.md)
+[中文](./README.md) [English](./README_EN.md)
 ## Project Description
 
 This project is designed to test the stability of the network when under high utilization for extended periods, especially during prolonged downloads. It focuses on assessing whether the network can maintain high-speed, stable downloads. The tool supports online preview, and users can access the test page through the browser to perform network usage testing.
