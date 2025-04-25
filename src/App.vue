@@ -97,7 +97,7 @@ const presetUrls = [
 ];
 
 
-const selectedUrl = ref(presetUrls[0].children[0].value)
+const selectedUrl = ref(presetUrls[1].children[0].value)
 const customUrl = ref('')
 const isCustomUrl = ref(false)
 const limit = ref(true)
@@ -153,7 +153,7 @@ const formatDuration = (ms) => {
 
 const startDownload = async () => {
   if (!fileUrl.value) {
-    MessagePlugin.warning(t('message.urlRequired'))
+    MessagePlugin.warning(t('message_urlRequired'))
     return
   }
 
@@ -189,7 +189,7 @@ const startDownload = async () => {
       const targetBytes = getTargetBytes()
 
       if (limit.value && (targetBytes > 0 && totalBytes.value >= targetBytes)) {
-        MessagePlugin.success(t('message.targetReached'))
+        MessagePlugin.success(t('message_targetReached'))
         stopDownload()
       }
     }, 1000)
@@ -213,7 +213,7 @@ const startDownload = async () => {
 
             const targetBytes = getTargetBytes()
             if (limit.value && (targetBytes > 0 && totalBytes.value >= targetBytes)) {
-              MessagePlugin.success(t('message.targetReached'))
+              MessagePlugin.success(t('message_targetReached'))
               stopDownload()
               break
             }
@@ -237,7 +237,7 @@ const startDownload = async () => {
     await Promise.all(threads)
   } catch (error) {
     if (error.name !== 'AbortError') {
-      MessagePlugin.error(t('message.downloadError') + error.message)
+      MessagePlugin.error(t('message_downloadError') + error.message)
     }
     stopDownload()
   }
@@ -302,7 +302,7 @@ const toggleLanguage = () => {
           <template v-else>
             <t-input
               v-model="customUrl"
-              :placeholder="t('customUrl.placeholder')"
+              :placeholder="t('customUrl_placeholder')"
               :disabled="isRunning"
             />
           </template>
@@ -310,7 +310,7 @@ const toggleLanguage = () => {
         <t-input-adornment>
           <t-input
             v-model="targetBytesValue"
-            :placeholder="t('targetTraffic.placeholder')"
+            :placeholder="t('targetTraffic_placeholder')"
             :disabled="isRunning"
             type="number"
           />
@@ -329,20 +329,20 @@ const toggleLanguage = () => {
             <t-input-number
               style="width: -webkit-fill-available;margin-right: 5px;"
               v-model="threadCount"
-              :placeholder="t('multiThread.placeholder')"
+              :placeholder="t('multiThread_placeholder')"
               :disabled="isRunning"
               type="number"
               :min="1"
               :max="32"
             />
             <template #append>
-              <span style="padding: 0 8px;">{{ t('multiThread.unit') }}</span>
+              <span style="padding: 0 8px;">{{ t('multiThread_unit') }}</span>
             </template>
           </t-input-adornment>
         </template>
         <div style="display: flex;justify-content: space-between;">
           <span>
-            {{ t('multiThread.label') }}&nbsp;
+            {{ t('multiThread_label') }}&nbsp;
             <t-switch
               v-model="isMultiThread"
               :disabled="isRunning"
@@ -350,7 +350,7 @@ const toggleLanguage = () => {
             ></t-switch>
           </span>
           <span>
-            {{ t('targetTraffic.label') }}&nbsp;
+            {{ t('targetTraffic_label') }}&nbsp;
             <t-switch
               v-model="limit"
               :disabled="isRunning"
@@ -358,7 +358,7 @@ const toggleLanguage = () => {
             ></t-switch>
           </span>
           <span>
-            {{ t('customUrl.label') }}&nbsp;
+            {{ t('customUrl_label') }}&nbsp;
             <t-switch
               v-model="isCustomUrl"
               :disabled="isRunning"
@@ -371,15 +371,15 @@ const toggleLanguage = () => {
           block
           @click="isRunning ? stopDownload() : startDownload()"
         >
-          {{ isRunning ? t('button.stop') : t('button.start') }}
+          {{ isRunning ? t('button_stop') : t('button_start') }}
         </t-button>
         <template v-if="limit">
           <t-progress theme="line" :color="{ from: '#0052D9', to: '#00A870' }" :percentage="Math.floor(totalBytes/getTargetBytes()*100)" :status="'active'" />
         </template>
         <t-space break-line style="display: flex;justify-content: space-around;flex-direction: row;">
-          <t-statistic :title="t('statistics.runningTime')" :value="startTime ? Date.now() - startTime : 0" :format="formatDuration" />
-          <t-statistic :title="t('statistics.currentSpeed')" :value="currentSpeed" :format="formatBytes" unit="/s" />
-          <t-statistic :title="t('statistics.usedTraffic')" :value="totalBytes" :format="formatBytes"/>
+          <t-statistic :title="t('statistics_runningTime')" :value="startTime ? Date.now() - startTime : 0" :format="formatDuration" />
+          <t-statistic :title="t('statistics_currentSpeed')" :value="currentSpeed" :format="formatBytes" unit="/s" />
+          <t-statistic :title="t('statistics_usedTraffic')" :value="totalBytes" :format="formatBytes"/>
         </t-space>
         
       </t-space>

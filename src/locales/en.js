@@ -1,31 +1,19 @@
 export default {
-  title: 'Network Stability Test',
-  customUrl: {
-    label: 'Custom Download URL',
-    placeholder: 'Please enter custom file link'
-  },
-  targetTraffic: {
-    label: 'Max Traffic Limit',
-    placeholder: 'Please enter max test traffic'
-  },
-  multiThread: {
-    label: 'Enable Multi-threading',
-    placeholder: 'Please enter thread count',
-    unit: 'threads'
-  },
-  button: {
-    start: 'Start',
-    stop: 'Stop'
-  },
-  message: {
-    urlRequired: 'Please enter file link',
-    targetReached: 'Target traffic reached',
-    downloadError: 'Download error: '
-  },
-  statistics: {
-    runningTime: 'Running Time',
-    currentSpeed: 'Current Speed',
-    usedTraffic: 'Used Traffic'
-  },
-  language: 'Language'
+  title: 'Network Usage Test Tool',
+  language: 'Language',
+  customUrl_label: 'Custom URL',
+  customUrl_placeholder: 'Enter custom download URL',
+  targetTraffic_label: 'Target Traffic',
+  targetTraffic_placeholder: 'Enter target traffic',
+  multiThread_label: 'Multi-thread',
+  multiThread_placeholder: 'Enter thread count',
+  multiThread_unit: 'threads',
+  button_start: 'Start Download',
+  button_stop: 'Stop Download',
+  statistics_runningTime: 'Running Time',
+  statistics_currentSpeed: 'Current Speed',
+  statistics_usedTraffic: 'Used Traffic',
+  message_urlRequired: 'Please enter download URL',
+  message_targetReached: 'Target traffic reached',
+  message_downloadError: 'Download error: '
 }

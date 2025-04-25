@@ -1,31 +1,19 @@
 export default {
-  title: '网络稳定性测试',
-  customUrl: {
-    label: '自定义下载地址',
-    placeholder: '请输入自定义文件链接'
-  },
-  targetTraffic: {
-    label: '最大流量限制',
-    placeholder: '请输入最大测试流量'
-  },
-  multiThread: {
-    label: '启用多线程',
-    placeholder: '请输入线程数量',
-    unit: '线程'
-  },
-  button: {
-    start: '开始',
-    stop: '停止'
-  },
-  message: {
-    urlRequired: '请输入文件链接',
-    targetReached: '已达到目标流量',
-    downloadError: '下载出错：'
-  },
-  statistics: {
-    runningTime: '已运行时间',
-    currentSpeed: '当前速度',
-    usedTraffic: '已使用流量'
-  },
-  language: '语言'
+  title: '网络占用测试工具',
+  language: '语言',
+  customUrl_label: '自定义地址',
+  customUrl_placeholder: '请输入自定义下载地址',
+  targetTraffic_label: '目标流量',
+  targetTraffic_placeholder: '请输入目标流量',
+  multiThread_label: '多线程下载',
+  multiThread_placeholder: '请输入线程数',
+  multiThread_unit: '线程',
+  button_start: '开始下载',
+  button_stop: '停止下载',
+  statistics_runningTime: '运行时间',
+  statistics_currentSpeed: '当前速度',
+  statistics_usedTraffic: '已用流量',
+  message_urlRequired: '请输入下载地址',
+  message_targetReached: '已达到目标流量',
+  message_downloadError: '下载出错：'
 }
